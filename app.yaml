@@ -1,5 +1,5 @@
 application: rolfm2-1013
-version: 1
+version: 2
 runtime: php55
 api_version: 1
 threadsafe: yes
@@ -13,4 +13,7 @@ handlers:
   static_dir: app/
 
 - url: .*
-  script: /app/index.html
+  script: main.php
+
+- url: /(.+)
+  script: main.php
